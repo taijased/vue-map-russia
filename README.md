@@ -1,26 +1,7 @@
 # vue-map-russia
 
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Links
 
-### Compiles and minifies for production
-```
-npm run build
-```
+* [euvl/vue-js-modal](http://vue-js-modal.yev.io/) - Vue.js Modal
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
