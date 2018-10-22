@@ -1,20 +1,35 @@
 <template>
-     <div class="wrapper">
+     <div class="wrapper" @click="goEvent($event)">
        <div class="wrapper-title">{{msg}}</div>
        <RussianMap/>
        <v-dialog/>
+       <PulseMarker v-if="x && y" :pointX="x" :pointY="y"/>
      </div>
 </template>
 
 <script>
 import RussianMap from "./RussianMap";
+import PulseMarker from "./PulseMarker";
 
 export default {
   props: {
     msg: String
   },
+  data() {
+    return {
+      x: null,
+      y: null
+    };
+  },
+  methods: {
+    goEvent(event) {
+      this.x = event.x - 25;
+      this.y = event.y - 25;
+    }
+  },
   components: {
-    RussianMap
+    RussianMap,
+    PulseMarker
   }
 };
 </script>
@@ -39,7 +54,7 @@ export default {
     z-index: 2;
     -moz-user-select: none;
     -khtml-user-select: none;
-    user-select: none;     
+    user-select: none;
   }
 }
 </style>
